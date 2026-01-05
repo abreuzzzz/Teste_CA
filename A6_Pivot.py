@@ -31,7 +31,7 @@ def ler_planilha_por_id(nome_arquivo):
 
 # Lê os dados das planilhas principais
 print("📥 Lendo planilhas de contas a receber e contas a pagar...")
-df_receber = ler_planilha_por_id("FInanceiro_contas_a_receber_Teste")
+df_receber = ler_planilha_por_id("Financeiro_contas_a_receber_Teste")
 df_pagar = ler_planilha_por_id("Financeiro_contas_a_pagar_Teste")
 
 # Adiciona a coluna tipo
@@ -216,6 +216,7 @@ if len(colunas_centro_custo) > 0 and len(colunas_valor) > 0:
     
     # Converte valores negativos em positivos
     if 'paid_new' in df_final.columns:
+        df_final['paid_new'] = pd.to_numeric(df_final['paid_new'], errors='coerce')
         df_final['paid_new'] = df_final['paid_new'].abs()
         print("  ✅ Valores negativos convertidos para positivos")
 
