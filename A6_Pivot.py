@@ -31,7 +31,7 @@ def ler_planilha_por_id(nome_arquivo):
 
 # Lê os dados das planilhas principais
 print("📥 Lendo planilhas de contas a receber e contas a pagar...")
-df_receber = ler_planilha_por_id("Financeiro_contas_a_receber_Teste")
+df_receber = ler_planilha_por_id("FInanceiro_contas_a_receber_Teste")
 df_pagar = ler_planilha_por_id("Financeiro_contas_a_pagar_Teste")
 
 # Adiciona a coluna tipo
